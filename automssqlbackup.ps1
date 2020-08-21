@@ -3,9 +3,10 @@
 
 #=====================================================================
 # MSSQL Backup Script
-# Version 0.31
+# Version 0.32
 # http://www.devio.at/index.php/automssqlbackup
 # (c) 2009-2012 devio IT Services
+# 2020 updated SQL Server versions
 # support@devio.at
 
 #=====================================================================
@@ -51,6 +52,19 @@
 # SQL Server 2012
 # en: $mspath = "C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\"
 
+# SQL Server 2014
+# en win64: $mspath = "C:\Program Files (x86)\Microsoft SQL Server\120\SDK\Assemblies"
+
+# SQL Server 2016
+# en: $mspath = "C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies"
+# en: $mspath = "C:\Program Files\Microsoft SQL Server\130\Tools\Binn\ManagementStudio"
+# en win64: $mspath = "C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio"
+
+# SSMS 2017
+# en win64: $mspath = "C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\"
+
+# SSMS 18
+# en win64: $mspath = "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\"
 
 &{
 # load SMO assemblies
@@ -78,7 +92,7 @@
 $username = ""	# "username"
 $password = ""	# "password"
 
-# db server, db names
+# db server (including \instance name), db names
 # set $dbnames = "" for all databases
 # set $dbnames = "- db1 db2" (leading minus sign) for all databases *except* listed
 $dbhost = "localhost"
@@ -195,6 +209,7 @@ $latest = 1
 
 #=====================================================================
 # Change Log
+# 0.32	200821	add assembly paths for SSMS 2014, 2016, 2017, SSMS 18
 # 0.31	120719	load assemblies for SQL SMO 2005, 2008, 2012
 # 0.30	090731	log exception message via $error[0]
 # 0.29	090407	long filesize, StatementTimeout, exception handler
@@ -324,7 +339,7 @@ function Compress($dbname, $backupfile)
 
 # end of function definitions
 
-$ver = "0.31"
+$ver = "0.32"
 
 $now = Get-Date
 
