@@ -8,7 +8,7 @@
 # (c) 2009-2012 devio IT Services
 # 2020 updated SQL Server versions
 # support@devio.at
-
+ 
 #=====================================================================
 # This program is inspired by and based on automysqlbackup.sh:
 #
