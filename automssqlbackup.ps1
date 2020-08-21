@@ -39,6 +39,7 @@
 
 
 # set $mspath to localized and SQL Server version-specific program files path
+# requires trailing backslash
 
 # SQL Server 2005
 
@@ -53,12 +54,12 @@
 # en: $mspath = "C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\"
 
 # SQL Server 2014
-# en win64: $mspath = "C:\Program Files (x86)\Microsoft SQL Server\120\SDK\Assemblies"
+# en win64: $mspath = "C:\Program Files (x86)\Microsoft SQL Server\120\SDK\Assemblies\"
 
 # SQL Server 2016
-# en: $mspath = "C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies"
-# en: $mspath = "C:\Program Files\Microsoft SQL Server\130\Tools\Binn\ManagementStudio"
-# en win64: $mspath = "C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio"
+# en: $mspath = "C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\"
+# en: $mspath = "C:\Program Files\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\"
+# en win64: $mspath = "C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\"
 
 # SSMS 2017
 # en win64: $mspath = "C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\"
